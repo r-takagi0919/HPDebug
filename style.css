@@ -22,8 +22,12 @@ img {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
+/* --------------------
+   Header
+-------------------- */
 header {
   background: linear-gradient(135deg, #2463eb, #60a5fa);
   color: white;
@@ -55,7 +59,6 @@ nav li {
 
 nav a {
   display: inline-block;
-  text-decoration: none;
   font-weight: bold;
   font-size: 0.92rem;
   padding: 6px 10px;
@@ -63,6 +66,9 @@ nav a {
   background: rgba(255, 255, 255, 0.14);
 }
 
+/* --------------------
+   Layout
+-------------------- */
 main {
   width: 100%;
   max-width: 720px;
@@ -82,6 +88,9 @@ section {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
+/* --------------------
+   Hero
+-------------------- */
 .hero {
   display: block;
 }
@@ -107,6 +116,9 @@ section {
   margin-top: 14px;
 }
 
+/* --------------------
+   Buttons
+-------------------- */
 .button-group {
   display: flex;
   flex-direction: column;
@@ -114,31 +126,19 @@ section {
   margin-top: 14px;
 }
 
-.btn {
+.btn,
+.submit-btn {
   display: block;
   width: 100%;
   text-align: center;
-  text-decoration: none;
   border: none;
   border-radius: 12px;
   padding: 13px 14px;
   font-weight: bold;
   font-size: 0.95rem;
+  background: #2463eb;
+  color: white;
   cursor: pointer;
-  background: #2463eb;
-  color: white;
-}
-
-.btn-primary {
-  background: #2463eb;
-  color: white;
-}
-
-.btn-secondary {
-  background: #2463eb; /* 青で統一 */
-  color: white;
-  pointer-events: none; /* わざと押せない */
-  opacity: 1;
 }
 
 .btn-small {
@@ -147,6 +147,13 @@ section {
   font-size: 0.78rem;
 }
 
+.btn-disabled {
+  pointer-events: none; /* わざと押せない */
+}
+
+/* --------------------
+   Typography
+-------------------- */
 .section-title {
   font-size: 1.25rem;
   line-height: 1.4;
@@ -154,7 +161,7 @@ section {
 }
 
 .center-title {
-  text-align: center;
+  text-align: center; /* わざとここだけ中央揃え */
 }
 
 .section-lead {
@@ -163,11 +170,19 @@ section {
   font-size: 0.94rem;
 }
 
+.tiny-note {
+  margin-top: 10px;
+  color: #9aa3b2;
+  font-size: 0.9rem;
+}
+
+/* --------------------
+   Cards / Lists
+-------------------- */
 .card-list,
 .place-grid,
 .info-list,
-.form-grid,
-.link-cards {
+.form-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -187,9 +202,8 @@ section {
   font-weight: bold;
 }
 
-.card p,
-.info-value,
-.card small {
+.card p {
+  margin: 0;
   font-size: 0.93rem;
 }
 
@@ -197,11 +211,13 @@ section {
   display: block;
   margin-top: 8px;
   color: #666;
+  font-size: 0.93rem;
 }
 
-.voice-large {
-  font-size: 1.5rem; /* 差がはっきり出るように修正 */
-  line-height: 1.7;
+/* 参加者の声の2枚目だけ大きくする */
+.card p.voice-large-text {
+  font-size: 1.45rem !important;
+  line-height: 1.8 !important;
 }
 
 .info-label {
@@ -211,6 +227,13 @@ section {
   margin-bottom: 4px;
 }
 
+.info-value {
+  font-size: 0.93rem;
+}
+
+/* --------------------
+   Notice
+-------------------- */
 .notice {
   margin-top: 12px;
   background: #fff7d6;
@@ -220,12 +243,9 @@ section {
   font-size: 0.92rem;
 }
 
-.tiny-note {
-  margin-top: 10px;
-  color: #9aa3b2;
-  font-size: 0.9rem;
-}
-
+/* --------------------
+   Form
+-------------------- */
 .field {
   display: grid;
   gap: 6px;
@@ -254,19 +274,6 @@ section {
   resize: none;
 }
 
-.submit-btn {
-  width: 100%;
-  margin-top: 14px;
-  border: none;
-  border-radius: 12px;
-  background: #2463eb;
-  color: white;
-  padding: 14px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 #result-message {
   margin-top: 12px;
   font-weight: bold;
@@ -274,41 +281,9 @@ section {
   font-size: 0.95rem;
 }
 
-.link-card {
-  display: block;
-  text-decoration: none;
-  background: linear-gradient(180deg, #ffffff, #f8fbff);
-  border: 1px solid #dbe7ff;
-  border-radius: 16px;
-  padding: 16px 14px;
-  box-shadow: 0 6px 18px rgba(36, 99, 235, 0.08);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.link-card:active {
-  transform: scale(0.98);
-}
-
-.link-card-title {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #1d4ed8;
-  margin-bottom: 4px;
-}
-
-.link-card-text {
-  color: #475569;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.link-card-arrow {
-  margin-top: 10px;
-  font-size: 0.88rem;
-  color: #2563eb;
-  font-weight: bold;
-}
-
+/* --------------------
+   Footer
+-------------------- */
 .footer-link {
   color: #93c5fd;
 }
@@ -322,6 +297,9 @@ footer {
   font-size: 0.88rem;
 }
 
+/* --------------------
+   PC
+-------------------- */
 @media (min-width: 768px) {
   header {
     padding: 18px 24px;
@@ -369,7 +347,8 @@ footer {
     flex-wrap: wrap;
   }
 
-  .btn {
+  .btn,
+  .submit-btn {
     width: auto;
   }
 
@@ -378,8 +357,7 @@ footer {
   }
 
   .card-list,
-  .place-grid,
-  .link-cards {
+  .place-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -392,18 +370,7 @@ footer {
   }
 
   .card p.voice-large-text {
-    font-size: 1.5rem !important;
+    font-size: 1.85rem !important;
     line-height: 1.8 !important;
-  }
-
-  @media (max-width: 767px) {
-    .card p.voice-large-text {
-      font-size: 1.45rem !important;
-      line-height: 1.8 !important;
-    }
-  }
-  
-  html {
-    -webkit-text-size-adjust: 100%;
   }
 }

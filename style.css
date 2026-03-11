@@ -6,24 +6,33 @@ body {
   line-height: 1.6;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 header {
   background: linear-gradient(135deg, #2463eb, #60a5fa);
   color: white;
-  padding: 18px 36px;
+  padding: 14px 16px;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  gap: 18px;
+  gap: 10px 14px;
   padding: 0;
   margin: 0;
 }
@@ -32,60 +41,66 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.95rem;
 }
 
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 28px 36px 60px;
+  padding: 20px 16px 48px;
 }
 
 section {
-  margin-top: 42px;
+  margin-top: 28px;
 }
 
 .hero {
   background: white;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 18px;
   align-items: center;
-  padding: 48px 36px;
+  padding: 24px 16px;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
-  margin: 0 0 12px;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin: 0 0 10px;
 }
 
 .hero p {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
+  font-size: 0.96rem;
 }
 
 .hero img,
 .place-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 14px;
   background: #dde7f5;
 }
 
 .button-row {
   display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 18px;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 18px;
+  width: 100%;
+  text-align: center;
+  padding: 12px 16px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
   border: none;
   cursor: pointer;
+  font-size: 0.95rem;
 }
 
 .btn-primary {
@@ -101,13 +116,16 @@ section {
 }
 
 .btn-small {
-  padding: 6px 10px; /* わざと小さい */
-  font-size: 0.8rem;
+  padding: 7px 10px; /* わざと小さい */
+  font-size: 0.78rem;
+  width: auto;
+  align-self: flex-start;
 }
 
 .section-title {
-  font-size: 1.7rem;
-  margin-bottom: 14px;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .center-title {
@@ -116,51 +134,61 @@ section {
 
 .section-lead {
   color: #666;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .card {
   background: white;
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
   margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.card p,
+.card small {
+  font-size: 0.95rem;
 }
 
 .voice-wrap,
 .place-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .voice-large {
-  font-size: 1.45rem; /* わざとここだけ大きい */
+  font-size: 1.2rem; /* わざとここだけ大きい */
 }
 
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
 }
 
 .schedule-table th,
 .schedule-table td {
   border: 1px solid #e5e7eb;
-  padding: 12px 14px;
+  padding: 10px 8px;
   text-align: left;
+  vertical-align: top;
+  word-break: break-word;
 }
 
 .schedule-table th {
@@ -171,28 +199,28 @@ section {
   margin-top: 14px;
   background: #fff7d6;
   border-left: 6px solid #f2c94c;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-radius: 8px;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
 }
 
 .tiny-note {
   color: #9aa3b2;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-top: 10px;
 }
 
 .entry-box {
   background: white;
-  border-radius: 16px;
-  padding: 22px;
+  border-radius: 14px;
+  padding: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .entry-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .field {
@@ -202,15 +230,18 @@ section {
 
 .field label {
   font-weight: bold;
+  font-size: 0.95rem;
 }
 
 .field input,
 .field select,
 .field textarea {
+  width: 100%;
   padding: 11px 12px;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   font-size: 1rem;
+  background: white;
 }
 
 .field textarea {
@@ -224,6 +255,7 @@ section {
 
 .submit-btn {
   margin-top: 16px;
+  width: 100%;
   background: #2463eb;
   color: white;
   padding: 13px 18px;
@@ -238,6 +270,7 @@ section {
   margin-top: 12px;
   font-weight: bold;
   color: #d62828;
+  font-size: 0.95rem;
 }
 
 .footer-link {
@@ -248,16 +281,91 @@ footer {
   background: #0f172a;
   color: white;
   text-align: center;
-  padding: 24px;
-  margin-top: 50px;
+  padding: 20px 16px;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 860px) {
-  .hero,
-  .cards,
+@media (min-width: 768px) {
+  header {
+    padding: 18px 36px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+
+  main {
+    padding: 28px 36px 60px;
+  }
+
+  section {
+    margin-top: 42px;
+  }
+
+  .hero {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 28px;
+    padding: 48px 36px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero img,
+  .place-card img {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .button-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .btn {
+    width: auto;
+  }
+
+  .btn-small {
+    width: auto;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+    margin-bottom: 14px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
   .voice-wrap,
-  .place-wrap,
+  .place-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .voice-large {
+    font-size: 1.45rem;
+  }
+
   .entry-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
 }

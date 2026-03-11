@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
@@ -12,8 +16,8 @@ body {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -23,21 +27,17 @@ a {
 header {
   background: linear-gradient(135deg, #2463eb, #60a5fa);
   color: white;
-  padding: 14px 16px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  padding: 12px 14px;
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: block;
 }
 
 .brand {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 nav ul {
@@ -60,56 +60,58 @@ nav a {
   font-size: 0.92rem;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 main {
-  padding: 16px;
+  width: 100%;
   max-width: 720px;
   margin: 0 auto;
+  padding: 14px;
 }
 
 section {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
-.panel {
+.panel,
+.entry-box {
   background: white;
-  border-radius: 18px;
-  padding: 18px 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 16px 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: block;
 }
 
 .hero-text h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   margin: 0 0 10px;
 }
 
 .hero-text p {
-  font-size: 0.95rem;
   margin: 0 0 10px;
+  font-size: 0.95rem;
 }
 
 .hero img,
 .place-card img {
+  width: 100%;
   height: 190px;
   object-fit: cover;
   border-radius: 14px;
   background: #dbe5f3;
+  margin-top: 14px;
 }
 
 .button-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .btn {
@@ -121,7 +123,7 @@ section {
   border-radius: 12px;
   padding: 13px 14px;
   font-weight: bold;
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   cursor: pointer;
 }
 
@@ -133,76 +135,73 @@ section {
 .btn-secondary {
   background: #e8f0ff;
   color: #2463eb;
-  pointer-events: none; /* わざと押せない */
+  pointer-events: none;
   opacity: 0.65;
 }
 
 .btn-small {
-  width: 68%;
-  padding: 7px 10px; /* わざと小さい */
-  font-size: 0.8rem;
+  width: 62%;
+  padding: 7px 10px;
+  font-size: 0.78rem;
 }
 
 .section-title {
-  font-size: 1.28rem;
-  margin: 0 0 12px;
+  font-size: 1.25rem;
   line-height: 1.4;
+  margin: 0 0 10px;
 }
 
 .center-title {
-  text-align: center; /* わざとここだけ中央揃え */
+  text-align: center;
 }
 
 .section-lead {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   color: #555;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
 }
 
-.card-list {
+.card-list,
+.place-grid,
+.link-cards,
+.info-list,
+.form-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 
-.card {
+.card,
+.info-item,
+.link-card {
   background: #fff;
-  border: 1px solid #eef2f7;
   border-radius: 14px;
   padding: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 1.02rem;
+.card h3,
+.link-card-title {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.card p {
-  margin: 0;
-  font-size: 0.94rem;
+.card p,
+.info-value,
+.link-card-text,
+.card small {
+  font-size: 0.93rem;
 }
 
 .card small {
   display: block;
   margin-top: 8px;
   color: #666;
-  font-size: 0.88rem;
 }
 
 .voice-large {
-  font-size: 1.16rem; /* わざと大きい */
-}
-
-.info-list {
-  display: grid;
-  gap: 10px;
-}
-
-.info-item {
-  background: white;
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font-size: 1.14rem;
 }
 
 .info-label {
@@ -212,48 +211,19 @@ section {
   margin-bottom: 4px;
 }
 
-.info-value {
-  font-size: 0.98rem;
-}
-
 .notice {
   margin-top: 12px;
   background: #fff7d6;
   border-left: 5px solid #f2c94c;
-  padding: 12px 13px;
+  padding: 12px;
   border-radius: 10px;
-  font-size: 0.93rem;
+  font-size: 0.92rem;
 }
 
 .tiny-note {
   margin-top: 10px;
   color: #9aa3b2;
   font-size: 0.9rem;
-}
-
-.place-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-.entry-box {
-  background: white;
-  border-radius: 18px;
-  padding: 18px 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
-}
-
-.entry-box p {
-  margin-top: 0;
-  margin-bottom: 14px;
-  font-size: 0.95rem;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
 }
 
 .field {
@@ -273,8 +243,10 @@ section {
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: 12px;
-  font-size: 1rem;
+  font-size: 16px; /* iPhoneの自動ズーム対策 */
   background: white;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .field textarea {
@@ -302,41 +274,16 @@ section {
   font-size: 0.95rem;
 }
 
-.link-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-.link-card {
-  display: block;
-  text-decoration: none;
-  background: white;
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-.link-card-title {
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.link-card-text {
-  color: #555;
-  font-size: 0.92rem;
-}
-
 .footer-link {
   color: #93c5fd;
 }
 
 footer {
-  margin-top: 28px;
+  margin-top: 24px;
   background: #0f172a;
   color: white;
   text-align: center;
-  padding: 18px 16px 26px;
+  padding: 18px 14px 24px;
   font-size: 0.88rem;
 }
 
@@ -346,14 +293,23 @@ footer {
   }
 
   nav {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  .brand {
+    margin-bottom: 0;
+  }
+
   main {
-    padding: 24px;
     max-width: 1000px;
+    padding: 24px;
+  }
+
+  .panel,
+  .entry-box {
+    padding: 20px;
   }
 
   .hero {
@@ -363,8 +319,14 @@ footer {
     align-items: center;
   }
 
+  .hero img,
+  .place-card img {
+    height: 220px;
+    margin-top: 0;
+  }
+
   .hero-text h1 {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   .button-group {

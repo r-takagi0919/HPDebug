@@ -135,13 +135,13 @@ section {
 .btn-secondary {
   background: #e8f0ff;
   color: #2463eb;
-  pointer-events: none;
+  pointer-events: none; /* わざと押せない */
   opacity: 0.65;
 }
 
 .btn-small {
   width: 62%;
-  padding: 7px 10px;
+  padding: 7px 10px; /* わざと小さい */
   font-size: 0.78rem;
 }
 
@@ -152,7 +152,7 @@ section {
 }
 
 .center-title {
-  text-align: center;
+  text-align: center; /* わざとここだけ中央揃え */
 }
 
 .section-lead {
@@ -163,25 +163,23 @@ section {
 
 .card-list,
 .place-grid,
-.link-cards,
 .info-list,
-.form-grid {
+.form-grid,
+.link-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
 .card,
-.info-item,
-.link-card {
+.info-item {
   background: #fff;
   border-radius: 14px;
   padding: 14px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
-.card h3,
-.link-card-title {
+.card h3 {
   margin: 0 0 6px;
   font-size: 1rem;
   font-weight: bold;
@@ -189,7 +187,6 @@ section {
 
 .card p,
 .info-value,
-.link-card-text,
 .card small {
   font-size: 0.93rem;
 }
@@ -201,7 +198,7 @@ section {
 }
 
 .voice-large {
-  font-size: 1.14rem;
+  font-size: 1.14rem; /* わざと大きい */
 }
 
 .info-label {
@@ -243,7 +240,7 @@ section {
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: 12px;
-  font-size: 16px; /* iPhoneの自動ズーム対策 */
+  font-size: 16px;
   background: white;
   appearance: none;
   -webkit-appearance: none;
@@ -272,6 +269,41 @@ section {
   font-weight: bold;
   color: #d62828;
   font-size: 0.95rem;
+}
+
+.link-card {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  border: 1px solid #dbe7ff;
+  border-radius: 16px;
+  padding: 16px 14px;
+  box-shadow: 0 6px 18px rgba(36, 99, 235, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.link-card:active {
+  transform: scale(0.98);
+}
+
+.link-card-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1d4ed8;
+  margin-bottom: 4px;
+}
+
+.link-card-text {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.link-card-arrow {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: #2563eb;
+  font-weight: bold;
 }
 
 .footer-link {

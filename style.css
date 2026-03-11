@@ -125,6 +125,8 @@ section {
   font-weight: bold;
   font-size: 0.95rem;
   cursor: pointer;
+  background: #2463eb;
+  color: white;
 }
 
 .btn-primary {
@@ -133,10 +135,10 @@ section {
 }
 
 .btn-secondary {
-  background: #e8f0ff;
-  color: #2463eb;
+  background: #2463eb; /* 青で統一 */
+  color: white;
   pointer-events: none; /* わざと押せない */
-  opacity: 0.65;
+  opacity: 1;
 }
 
 .btn-small {
@@ -152,7 +154,7 @@ section {
 }
 
 .center-title {
-  text-align: center; /* わざとここだけ中央揃え */
+  text-align: center;
 }
 
 .section-lead {
@@ -198,7 +200,8 @@ section {
 }
 
 .voice-large {
-  font-size: 1.14rem; /* わざと大きい */
+  font-size: 1.5rem; /* 差がはっきり出るように修正 */
+  line-height: 1.7;
 }
 
 .info-label {
@@ -386,5 +389,17 @@ footer {
 
   .full {
     grid-column: 1 / -1;
+  }
+
+  .voice-large-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 768px) {
+    .voice-large-text {
+      font-size: 1.9rem;
+      line-height: 1.8;
+    }
   }
 }

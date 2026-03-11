@@ -391,8 +391,8 @@ footer {
     grid-column: 1 / -1;
   }
 
-  .voice-large-text {
-    font-size: 2rem;
+  .card .voice-large-text {
+    font-size: 1.5rem;
     line-height: 1.8;
   }
 

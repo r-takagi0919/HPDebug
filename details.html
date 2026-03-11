@@ -9,7 +9,7 @@
 <body>
   <header>
     <nav>
-      <div><strong>未来ITラボ</strong></div>
+      <div class="brand">未来ITラボ</div>
       <ul>
         <li><a href="index.html">ホーム</a></li>
         <li><a href="details.html">詳細</a></li>
@@ -19,41 +19,56 @@
   </header>
 
   <main>
-    <section>
+    <section class="panel">
       <h1 class="section-title">開催概要</h1>
-      <p class="section-lead">開催日：2026年8月22日（土） / 定員20名 / 参加費無料</p>
+      <p class="section-lead">スマホでも見やすいように、情報をカードでまとめています。</p>
 
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>時間</th>
-            <th>内容</th>
-            <th>場所</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>13:00〜13:10</td>
-            <td>受付・会場案内</td>
-            <td>1階ロビー</td>
-          </tr>
-          <tr>
-            <td>13:10〜13:20</td>
-            <td>会社紹介</td>
-            <td>2階会議室A</td>
-          </tr>
-          <tr>
-            <td>13:20〜13:50</td>
-            <td>バグ発見ワーク</td>
-            <td>3階 研修室</td>
-          </tr>
-          <tr>
-            <td>13:45〜14:00</td>
-            <td>ふり返り・アンケート</td>
-            <td>3階 研修室</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-label">開催日</div>
+          <div class="info-value">2026年8月22日（土）</div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-label">定員</div>
+          <div class="info-value">20名</div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-label">参加費</div>
+          <div class="info-value">無料</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">当日の流れ</h2>
+
+      <div class="card-list">
+        <div class="card">
+          <h3>13:00〜13:10</h3>
+          <p>受付・会場案内</p>
+          <small>1階ロビー</small>
+        </div>
+
+        <div class="card">
+          <h3>13:10〜13:20</h3>
+          <p>会社紹介</p>
+          <small>2階会議室A</small>
+        </div>
+
+        <div class="card">
+          <h3>13:20〜13:50</h3>
+          <p>バグ発見ワーク</p>
+          <small>3階 研修室</small>
+        </div>
+
+        <div class="card">
+          <h3>13:45〜14:00</h3>
+          <p>ふり返り・アンケート</p>
+          <small>3階 研修室</small>
+        </div>
+      </div>
 
       <div class="notice">
         持ち物：筆記用具、スマホまたはPC、学生証、制服
@@ -61,17 +76,20 @@
       <p class="tiny-note">服装は自由です。私服で気軽に参加してください。</p>
     </section>
 
-    <section>
+    <section class="panel">
       <h2 class="section-title">募集情報</h2>
-      <div class="cards">
+
+      <div class="card-list">
         <div class="card">
           <h3>対象</h3>
           <p>高校1年生〜高校3年生</p>
         </div>
+
         <div class="card">
           <h3>定員</h3>
           <p>先着30名</p>
         </div>
+
         <div class="card">
           <h3>参加費</h3>
           <p>無料</p>
@@ -79,17 +97,26 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <h2 class="section-title">ページ移動</h2>
-      <div class="button-row">
-        <a class="btn btn-primary" href="index.html">トップへ戻る</a>
-        <a class="btn btn-primary" href="entry.html">申し込みページへ</a>
+
+      <div class="link-cards">
+        <a class="link-card" href="index.html">
+          <div class="link-card-title">トップへ戻る</div>
+          <div class="link-card-text">最初のページに戻ります</div>
+        </a>
+
+        <a class="link-card" href="entry.html">
+          <div class="link-card-title">申し込みページへ</div>
+          <div class="link-card-text">申し込みフォームへ進みます</div>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 未来ITラボ / TEL: 03-1234-5678</p>
+    <p>© 2026 未来ITラボ</p>
+    <p>TEL: 03-1234-5678</p>
   </footer>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <body>
   <header>
     <nav>
-      <div><strong>未来ITラボ</strong></div>
+      <div class="brand">未来ITラボ</div>
       <ul>
         <li><a href="index.html">ホーム</a></li>
         <li><a href="details.html">詳細</a></li>
@@ -19,54 +19,60 @@
   </header>
 
   <main>
-    <section>
+    <section class="entry-box">
       <h1 class="section-title">お申し込み</h1>
-      <div class="entry-box">
-        <p>参加を希望する方は、下のフォームに入力して送信してください。</p>
+      <p>参加を希望する方は、下のフォームに入力して送信してください。</p>
 
-        <form id="entry-form">
-          <div class="entry-grid">
-            <div class="field">
-              <label for="name">氏名</label>
-              <input id="name" type="text" placeholder="例：山田 花子" />
-            </div>
-
-            <div class="field">
-              <label for="school">学校名</label>
-              <input id="school" type="text" placeholder="例：○○高校" />
-            </div>
-
-            <div class="field">
-              <label for="grade">学年</label>
-              <input id="grade" type="email" placeholder="sample@example.com" />
-            </div>
-
-            <div class="field">
-              <label for="mail">メールアドレス</label>
-              <select id="mail">
-                <option>高校1年生</option>
-                <option>高校2年生</option>
-                <option>高校3年生</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="message">質問・不安なこと</label>
-              <textarea id="message" placeholder="自由にご記入ください"></textarea>
-            </div>
+      <form id="entry-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">氏名</label>
+            <input id="name" type="text" placeholder="例：山田 花子" />
           </div>
 
-          <button class="submit-btn" type="submit">申し込む</button>
-          <p id="result-message"></p>
-        </form>
-      </div>
+          <div class="field">
+            <label for="school">学校名</label>
+            <input id="school" type="text" placeholder="例：○○高校" />
+          </div>
+
+          <div class="field">
+            <label for="grade">学年</label>
+            <input id="grade" type="email" placeholder="sample@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="mail">メールアドレス</label>
+            <select id="mail">
+              <option>高校1年生</option>
+              <option>高校2年生</option>
+              <option>高校3年生</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">質問・不安なこと</label>
+            <textarea id="message" placeholder="自由にご記入ください"></textarea>
+          </div>
+        </div>
+
+        <button class="submit-btn" type="submit">申し込む</button>
+        <p id="result-message"></p>
+      </form>
     </section>
 
-    <section>
+    <section class="panel">
       <h2 class="section-title">関連ページ</h2>
-      <div class="button-row">
-        <a class="btn btn-primary" href="details.html">トップページ</a>
-        <a class="btn btn-primary" href="index.html">開催詳細</a>
+
+      <div class="link-cards">
+        <a class="link-card" href="details.html">
+          <div class="link-card-title">トップページ</div>
+          <div class="link-card-text">最初の案内ページへ戻ります</div>
+        </a>
+
+        <a class="link-card" href="index.html">
+          <div class="link-card-title">開催詳細</div>
+          <div class="link-card-text">日程や募集情報を確認できます</div>
+        </a>
       </div>
     </section>
   </main>
